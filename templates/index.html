@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLOv4 Object Detection</title>
+</head>
+<body>
+    <h1>YOLOv4 Object Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <button type="submit" name="detect">감지</button>
+    </form>
+    {% if result %}
+        <h2>감지 결과</h2>
+        <img src="{{ result }}" alt="감지된 이미지">
+    {% endif %}
+</body>
+</html>
